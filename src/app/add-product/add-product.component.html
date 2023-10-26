@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="text-center"><h1>Add New Product</h1></div>
+
+    <div style="width:50%;margin:auto" >
+        <form [formGroup]="addForm" novalidate class="form">
+            <div class="row">
+                <div class="col-md-6">Product Name</div>
+                <div class="col-md-6"><input type="text" class="form-control" name="name" formControlName="name"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">Details</div>
+                <div class="col-md-6"><input type="text" class="form-control" name="detail" formControlName="detail"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">Price</div>
+                <div class="col-md-6"><input type="text" class="form-control" name="price" formControlName="price"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-success" (click)="onSubmit()" >ADD PRODUCT</button>
+                    <button class="btn btn-primary" (click)="goback()" >GO BACK</button>
+                </div>
+            </div>
+
+           
+                            
+        </form>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,46 @@
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid" style="display:flex;flex-direction:row; justify-content:center;align-items:center">
+      <span class="navbar-brand mb-0 h1" style="text-align:center;text-transform:uppercase">PRODUCT CRUD Operations</span>
+    </div>
+   
+  </nav>
+  <br>
+
+
+<div style="text-align:center">
+    <a href="create"  class="btn btn-success">Add New Product</a>
+    <button mat-flat-button (click)="goback()" >BACK TO DASHBOARD</button>
+</div>
+<br>
+<div class="container-fluid">
+  <table class="table" style="border:0lvb;">
+    <thead class="bg-secondary">
+        <th>SlNo</th>
+      <!-- <th>id</th> -->
+      <th >Name of product</th>
+      <th>Details </th>
+      <th>Price </th>
+      <th>edit</th>
+      <th>delete</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let products of product ;let i = index;">
+        
+        <td>{{ i + 1 }}</td>
+        <!-- <td>{{ products.id }}</td> -->
+        <td>{{ products.name }}</td>
+        <td>{{ products.detail }}</td>
+        <td>{{ products.price }}</td>
+        <td><a  mat-raised-button [routerLink]="['/EditProduct/', products.id]"  class="success"><mat-icon aria-hidden="false" aria-label="Example edit icon" fontIcon="edit"></mat-icon>Edit</a></td>
+        <!-- <td><button   class="btn btn-info">Edit</button></td>  [routerLink]="['/EditProduct/', products.id]"-->
+        <td><button mat-raised-button (click)="deleteProduct(products)" color="primary" ><mat-icon aria-hidden="false" aria-label="Example delete icon" fontIcon="delete"></mat-icon>Delete</button></td>
+        <!-- <td><button (click)="getSingleProductDetails(products)"  class="btn btn-info">Edit</button></td> -->
+        <!-- <td><a href="edit/{{ student.id }}" class="btn btn-success">Edit</a> | 
+          <button (click)="deleteStudent(student)" class="btn btn-info">Delete</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

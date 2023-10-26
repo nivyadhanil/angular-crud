@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="text-center"><h1>Edit User Registration</h1></div>
+
+    <div style="width:50%;margin:auto" >
+        <form [formGroup]="edituserForm" novalidate class="form">
+            <div class="row">
+                <div class="col-md-6"> Name</div>
+                <div class="col-md-6"><input type="text" class="form-control" name="name" formControlName="name"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">Email</div>
+                <div class="col-md-6"><input type="text" class="form-control" name="email" formControlName="email"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">Mobile No</div>
+                <div class="col-md-6"><input type="text" class="form-control" name="mobileno" formControlName="mobileno"></div>
+            </div>
+
+            <!-- <div class="row">
+                <div class="col-md-6">Password </div>
+                <div class="col-md-6"><input type="password" class="form-control" name="password" formControlName="password"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">Confirm Password</div>
+                <div class="col-md-6"><input type="password" class="form-control" name="c_password" formControlName="c_password"></div>
+            </div> -->
+
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-success" (click)="updateUser()" >Update</button>
+                    <button class="btn btn-primary" (click)="goback()" >GO BACK</button>
+                </div>
+            </div>
+
+           
+                            
+        </form>
+    </div>
+</div>
+
+
+
+
+
